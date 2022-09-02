@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "boot": "lerna bootstrap",
+    "clean": "lerna clean",
     "format": "prettier '**/*.{js,jsx,ts,tsx,json,md}' --write",
     "prepare": "husky install"
   },
