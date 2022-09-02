@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import { Card } from "./Card";
-import { LATEST_BLOCK, LONG_DURATION } from "../config";
+import { LATEST_BLOCK } from "../config";
 import type { SyncInfo } from "../types";
 
 interface Props {
@@ -8,10 +8,7 @@ interface Props {
 }
 
 export const GqlComsumer = ({ specName }: Props) => {
-  const { data, loading } = useQuery<{ blocks: { nodes: SyncInfo[] } | null }>(LATEST_BLOCK, {
-    notifyOnNetworkStatusChange: true,
-    pollInterval: LONG_DURATION,
-  });
+  const { data, loading } = useQuery<{ blocks: { nodes: SyncInfo[] } | null }>(LATEST_BLOCK);
 
   return data?.blocks?.nodes.length ? (
     <>
