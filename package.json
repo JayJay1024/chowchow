@@ -7,6 +7,7 @@
   "scripts": {
     "boot": "lerna bootstrap",
     "dev:block-sync": "lerna run dev --scope=block-sync",
+    "build:block-sync": "lerna run build --scope=block-sync",
     "clean": "lerna clean",
     "lint": "eslint 'packages/**/*.{js,jsx,ts,tsx}' --fix",
     "stylelint": "stylelint '**/*.{css,less,scss}' --fix",
