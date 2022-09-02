@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "scripts": {
+    "boot": "lerna bootstrap",
     "format": "prettier '**/*.{js,jsx,ts,tsx,json,md}' --write",
     "prepare": "husky install"
   },
