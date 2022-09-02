@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "boot": "lerna bootstrap",
+    "dev:block-sync": "lerna run dev --scope=block-sync",
     "clean": "lerna clean",
     "format": "prettier '**/*.{js,jsx,ts,tsx,json,md}' --write",
     "prepare": "husky install"
