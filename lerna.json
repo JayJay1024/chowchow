@@ -3,5 +3,10 @@
   "useNx": true,
   "useWorkspaces": true,
   "version": "independent",
-  "npmClient": "yarn"
+  "npmClient": "yarn",
+  "command": {
+    "version": {
+      "allowBranch": ["main"]
+    }
+  }
 }
