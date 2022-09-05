@@ -14,7 +14,7 @@ const Page = () => {
   }, [refetchs]);
 
   return (
-    <div className="container mx-auto flex justify-center pt-12 md:pt-[15%]">
+    <div className="container mx-auto flex justify-center pt-4 md:pt-[15%]">
       <div className="w-fit flex flex-col">
         <div className="flex justify-end">
           <button
