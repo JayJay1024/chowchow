@@ -14,16 +14,20 @@ export const ThemeModeSelect = () => {
 
     switch (e.target.value as ThemeMode) {
       case ThemeMode.LIGHT:
-        document.documentElement.classList.remove("dark");
         localStorage.theme = ThemeMode.LIGHT;
+        document.documentElement.classList.remove("dark");
         break;
       case ThemeMode.DARK:
-        document.documentElement.classList.add("dark");
         localStorage.theme = ThemeMode.DARK;
+        document.documentElement.classList.add("dark");
         break;
       case ThemeMode.SYSTEM:
-        document.documentElement.classList.remove("dark");
         localStorage.removeItem("theme");
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
         break;
     }
   };
