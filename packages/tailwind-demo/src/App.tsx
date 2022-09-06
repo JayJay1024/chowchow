@@ -1,7 +1,9 @@
+import { ThemeModeSelect } from "./components/ThemeModeSelect";
+
 function App() {
   return (
-    <div>
-      <p className="text-blue-400">LOL</p>
+    <div className="w-screen h-screen flex justify-center items-center">
+      <ThemeModeSelect />
     </div>
   );
 }
