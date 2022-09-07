@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "boot": "lerna bootstrap",
+    "dev:root": "lerna run dev --scope=root",
     "dev:block-sync": "lerna run dev --scope=block-sync",
     "dev:tailwind-demo": "lerna run dev --scope=tailwind-demo",
     "build:block-sync": "lerna run build --scope=block-sync",
