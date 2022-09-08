@@ -44,6 +44,10 @@ const config = {
     extensions: [".tsx", ".ts", ".js"],
   },
   devtool: "inline-source-map",
+  devServer: {
+    static: "./dist",
+    port: 3000,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: "Webpack Demo",
@@ -53,6 +57,9 @@ const config = {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+  },
+  optimization: {
+    runtimeChunk: "single",
   },
 };
 

@@ -9,6 +9,7 @@
     "dev:root": "lerna run dev --scope=root",
     "dev:block-sync": "lerna run dev --scope=block-sync",
     "dev:tailwind-demo": "lerna run dev --scope=tailwind-demo",
+    "dev:webpack-demo": "lerna run dev --scope=webpack-demo",
     "build:root": "lerna run build --scope=root",
     "build:block-sync": "lerna run build --scope=block-sync",
     "build:tailwind-demo": "lerna run build --scope=tailwind-demo",
