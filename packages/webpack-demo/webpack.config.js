@@ -1,12 +1,16 @@
 import path from "path";
 import { fileURLToPath } from "url";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const config = {
-  mode: "production",
-  entry: "./src/index.tsx",
+  mode: "development",
+  entry: {
+    main: "./src/index.tsx",
+    print: "./src/print.ts",
+  },
   module: {
     rules: [
       {
@@ -39,9 +43,16 @@ const config = {
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
+  devtool: "inline-source-map",
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Webpack Demo",
+    }),
+  ],
   output: {
-    filename: "main.js",
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
+    clean: true,
   },
 };
 
