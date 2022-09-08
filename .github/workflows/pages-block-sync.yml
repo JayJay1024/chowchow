@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - packages/block-sync/**
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:

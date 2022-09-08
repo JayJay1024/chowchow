@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - packages/root/**
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
