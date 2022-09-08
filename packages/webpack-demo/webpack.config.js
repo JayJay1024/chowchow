@@ -9,7 +9,7 @@ const config = {
   mode: "development",
   entry: {
     main: "./src/index.tsx",
-    print: "./src/print.ts",
+    // print: "./src/print.ts",
   },
   module: {
     rules: [
@@ -50,11 +50,11 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack Demo",
+      template: "public/index.html",
     }),
   ],
   output: {
-    filename: "[name].bundle.js",
+    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
