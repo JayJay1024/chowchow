@@ -1,6 +1,6 @@
-name: Bug Report V2
+name: 🐞 Bug Report V2
 description: File a bug report
-title: "[Bug]: "
+title: "[Bug]: <title>"
 labels: ["bug", "triage"]
 assignees:
   - octocat
